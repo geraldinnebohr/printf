@@ -25,13 +25,17 @@ int aux(int arg)
 	i = 0;
 	if (arg < 0)
 	{
-		_putchar('-');
+		i += _putchar('-');
 		arg = -arg;
 	}
+	if (arg == 0)
+	{
+		i += _putchar('0');
+	}
+
 	if (arg / 10)
 		i += aux(arg /  10);
 
-	_putchar(arg % 10 + '0');
-	i++;
+	i += _putchar(arg % 10 + '0');
 	return (i);
 }
