@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	if (format != NULL)
 	{
 		i = 0;
-		for (; format[cont] != '\0'; i++, cont ++)
+		for (; format[cont] != '\0'; i++, cont++)
 		{
 			if (format[cont] != '%')
 				_putchar(format[cont]);
