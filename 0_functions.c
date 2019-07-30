@@ -20,11 +20,14 @@ int printf_str(va_list list)
 {
 	int i;
 	char *ptr = va_arg(list, char *);
+	char *ptrNULL = "(null)";
 
 	if (ptr == NULL)
-		ptr = "(null)";
-	for (i = 0; ptr[i] != '\0'; i++)
-		_putchar(ptr[i]);
+		for (i = 0; ptrNULL[i] != '\0'; i++)
+			_putchar(ptrNULL[i]);
+	else
+		for (i = 0; ptr[i] != '\0'; i++)
+			_putchar(ptr[i]);
 
 	return (i);
 }
