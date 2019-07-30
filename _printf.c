@@ -26,13 +26,8 @@ int _printf(const char *format, ...)
 			else if (format[cont] == '%' && format[cont + 1] != '\0')
 			{
 				z = get_function(format[cont + 1]);
-				if (z == NULL)
-					_putchar(format[cont]);
-				else
-				{
-					i = (i + z(list)) - 1;
-					cont++;
-				}
+				i = (i + z(list)) - 1;
+				cont++;
 			}
 		}
 	}
