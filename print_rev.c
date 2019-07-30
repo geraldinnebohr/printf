@@ -1,11 +1,10 @@
 #include "holberton.h"
-
 /**
- * print_rev - prints a string, in reverse.
- * @s: Type char
+ * printf_reversed - prints a string, in reverse.
+ * @list: arguments.
+ * Return: string.
  */
-
-int printf_digit(va_list list);
+int printf_reversed(va_list list);
 {
 	int a;
 
