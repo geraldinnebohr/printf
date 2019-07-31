@@ -3,16 +3,16 @@
  * printf_reversed - prints a string, in reverse.
  * @list: arguments.
  * Return: string.
- */
-int printf_reversed(va_list list);
+
+int printf_reversed(va_list list)
 {
 	int a;
 
 	int arg = va_arg(list, int);
 
+	if (arg{})	
 	for (a = 0; arg[a] != '\0'; a++)
 	{
-
 	}
 	a--;
 	while (arg[a] != 0)
@@ -21,4 +21,6 @@ int printf_reversed(va_list list);
 		a--;
 	}
 	_putchar('\n');
+
 }
+*/
