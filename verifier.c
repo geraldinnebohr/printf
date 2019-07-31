@@ -11,7 +11,8 @@ int (*get_function(char c))(va_list a)
 		{"c", printf_char},
 		{"s", printf_str},
 		{"%", printf_porc},
-/**		{"r", printf_reversed},*/
+		{"d", printf_digit},
+		{"i", printf_digit},
 		{NULL, NULL}
 	};
 	for (j = 0; prn[j].p_str != '\0'; j++)
