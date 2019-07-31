@@ -33,7 +33,7 @@ int aux(int arg)
 	if (number == 0)
 	{
 		i += _putchar('0');
-		return(i);
+		return (i);
 	}
 
 	if (number / 10)
