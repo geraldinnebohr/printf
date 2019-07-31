@@ -13,6 +13,7 @@ int (*get_function(char c))(va_list a)
 		{"%", printf_porc},
 		{"d", printf_digit},
 		{"i", printf_digit},
+		{"r", printf_reversed},
 		{NULL, NULL}
 	};
 	for (j = 0; prn[j].p_str != '\0'; j++)
