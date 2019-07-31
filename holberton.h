@@ -23,6 +23,7 @@ int printf_char(va_list list);
 int printf_str(va_list list);
 int printf_porc(va_list list);
 int printf_digit(va_list list);
+int printf_reversed(va_list list);
 int aux(int arg);
 int (*get_function(char c))(va_list a);
 #endif
