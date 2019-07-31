@@ -12,10 +12,6 @@ int _printf(const char *format, ...);
 .PP
 .B int _printf(const char *format, ...);
 .PP
-.B int printnumberoctal(unsigned int n);
-.PP
-.B int _puts(char *str);
-.PP
 .B int _putchar(char c);
 .br
 .PP
@@ -26,14 +22,6 @@ int _printf(const char *format, ...);
 .B int printf_string(va_list args);
 .PP
 .B int printf_int(va_list args);
-.PP
-.B int printf_dec(va_list args);
-.PP
-.B int printnumber(int n);
-.PP
-.B int printf_oct(va_list args);
-.PP
-.B int printf_percent(va_list args);
 .br
 .SH DESCRIPTION
 .br
@@ -43,7 +31,7 @@ _printf() produce output according to a format, write output to stdout.
 .br
 .B Characters
 .PP
-_printf("Character with _print:[%c][%c][%c][%c]\n", 'H', 'o', 'l', 'b');
+_printf("Character with _print:[%c][%c][%c][%c]\n", 'c', 's', 'd', 'i');
 .PP
 .I Output:
 Holb
@@ -70,6 +58,34 @@ _printf("Actual: %i\n", INT_MAX);
 .SH BUGS
 .br
 for now the function _printf don?t handle the flag characters, field width, precision, and length modifiers 
+.br
+.SH EXAMPLE
+.br
+.PP
+.I we use these libraries:
+.PP
+#include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
+.PP
+We use these conversion specifiers:
+.PP
+{"c", printf_char},
+{"s", printf_str},
+{"%", printf_porc},
+{"d", printf_digit},
+{"i", printf_digit},
+{"r", printf_reversed},
+{NULL, NULL}
+.PP
+Part of the code we use:
+.PP
+if (format[cont] != '%')
+_putchar(format[cont]);
+else if (format[cont] == '%' && format[cont + 1] == '\0')
+{
+return (-1);
+}
 .br
 .SH AUTHOR
 .br
