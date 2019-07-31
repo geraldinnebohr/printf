@@ -21,22 +21,24 @@ int printf_digit(va_list list)
 int aux(int arg)
 {
 	int i;
+	unsigned int number;
 
 	i = 0;
+	number = arg;
 	if (arg < 0)
 	{
 		i += _putchar('-');
-		arg = -arg;
+		number = -number;
 	}
-	if (arg == 0)
+	if (number == 0)
 	{
 		i += _putchar('0');
 		return (i);
 	}
 
-	if (arg / 10)
-		i += aux(arg /  10);
+	if (number / 10)
+		i += aux(number /  10);
 
-	i += _putchar(arg % 10 + '0');
+	i += _putchar(number % 10 + '0');
 	return (i);
 }
